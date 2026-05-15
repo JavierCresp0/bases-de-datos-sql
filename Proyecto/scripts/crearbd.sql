@@ -104,7 +104,7 @@ CREATE TABLE TIENE
 (
  numabonado VARCHAR2(10),
  coddescuento VARCHAR2(30),
- descuentoutilizado VARCHAR(10),
+ descuentoutilizado VARCHAR2(10),
  ciftien VARCHAR2(10),
  CONSTRAINT tie_numabonado_coddesc_pk PRIMARY KEY(numabonado, coddescuento),
  CONSTRAINT tiene_numabonado_fk FOREIGN KEY (numabonado) REFERENCES ABONADO,
