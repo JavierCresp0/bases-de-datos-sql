@@ -1,3 +1,8 @@
+CONNECT system/bdadmin;
+CREATE USER p4 IDENTIFIED BY p4;
+GRANT connect, resource TO p4;
+connect p4/p4;
+
 CREATE TABLE SALA
 (
  codigo VARCHAR2(30),
@@ -135,3 +140,14 @@ ALTER TABLE TRABAJADOR MODIFY(salario DEFAULT 0
 			CONSTRAINT tra_sal_ch CHECK (salario >=800));
 
 ALTER TABLE ABONADO MODIFY(CONSTRAINT abo_tel_ch CHECK (telefono < 1000000000));
+
+/******************/
+/* MODIFICACIONES */
+/******************/
+ALTER TABLE MONITOR ADD (numclases INTEGER DEFAULT 0);
+
+ALTER TABLE PISTA ADD CONSTRAINT pista_estado_ch CHECK (estado IN ('Disponible', 'Ocupada'));
+
+
+ALTER TABLE TIENE DROP CONSTRAINT tie_numabonado_coddesc_pk;
+ALTER TABLE TIENE ADD CONSTRAINT tie_num_cod_cif_pk PRIMARY KEY (numabonado, ciftien, coddescuento);
