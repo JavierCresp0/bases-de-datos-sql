@@ -15,7 +15,6 @@ Gestión de un **club deportivo** que incluye:
 
 ```
 ├── Memoria.pdf                  ← memoria completa del proyecto
-├── Enunciado.pdf                ← especificaciones
 ├── diagramas/
 │   ├── Diagrama-ER.png          ← diagrama Entidad-Relación
 │   └── Diagrama-ER.drawio       ← fuente editable

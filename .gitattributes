@@ -1,0 +1,3 @@
+# GitHub no cuenta SQL en la barra de lenguajes por defecto (lo trata como datos).
+*.sql linguist-detectable=true
+plsql/**/*.sql linguist-language=PLSQL
